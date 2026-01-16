@@ -1,0 +1,18 @@
+{
+  "name": "uni-notice-board",
+  "version": "1.0.0",
+  "description": "University Digital Notice Board with CI/CD",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir dist --public-url ./",
+    "test:html": "htmlhint \"src/*.html\"",
+    "test:css": "stylelint \"styles/*.css\"",
+    "test": "npm run test:html && npm run test:css"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "parcel": "^2.13.3",
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard": "^36.0.1"
+  }
+}
