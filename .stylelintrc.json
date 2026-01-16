@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "color-hex-length": null,
+    "hue-degree-notation": null,
+    "lightness-notation": null,
+    "declaration-block-no-redundant-longhand-properties": null
+  }
+}
