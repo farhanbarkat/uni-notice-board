@@ -1,0 +1,23 @@
+name: CD Pipeline
+
+# Jab 'develop' branch par push ho, tab chalay
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  # Deployment Job
+  deploy:
+    name: Deploy to Render
+    runs-on: ubuntu-latest
+    [cite_start]environment: development  # GitHub Environment connect kiya [cite: 40]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Trigger Render Deployment
+        # Render ke secret link par signal bhejna [cite: 37, 52]
+        run: |
+          curl -X POST ${{ secrets.RENDER_CALLBACK_URL }}
