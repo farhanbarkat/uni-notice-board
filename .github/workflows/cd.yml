@@ -11,14 +11,13 @@ jobs:
   deploy:
     name: Deploy to Render
     runs-on: ubuntu-latest
-    [cite_start]
-    environment: development  # GitHub Environment connect kiya [cite: 40]
+    environment: development  # GitHub Environment connect kiya
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
       - name: Trigger Render Deployment
-        # Render ke secret link par signal bhejna [cite: 37, 52]
+        # Render ke secret link par signal bhejna
         run: |
           curl -X POST ${{ secrets.RENDER_CALLBACK_URL }}
