@@ -11,7 +11,8 @@ jobs:
   deploy:
     name: Deploy to Render
     runs-on: ubuntu-latest
-    [cite_start]environment: development  # GitHub Environment connect kiya [cite: 40]
+    [cite_start]
+    environment: development  # GitHub Environment connect kiya [cite: 40]
 
     steps:
       - name: Checkout Code
